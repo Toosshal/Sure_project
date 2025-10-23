@@ -1,4 +1,4 @@
-# 🧾 Credit Card PDF Parser
+# 🧾  PDF Parser
 
 A lightweight Python tool to **extract key information** from credit card statements across **multiple issuers** — automatically detecting the bank, reading real-world PDFs, and extracting structured data like due dates, balances, and billing cycles.
 
@@ -76,4 +76,5 @@ Applies regex patterns – Extracts specific fields like dates, balances, and ca
 
 Outputs structured JSON – Displays extracted info neatly using the rich library.
 
+<img width="699" height="237" alt="image" src="https://github.com/user-attachments/assets/5f34ce71-fa77-4527-92ac-8f2edec92cdb" />
 
