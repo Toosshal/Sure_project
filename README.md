@@ -25,24 +25,55 @@ To build a unified PDF parser that extracts **5 key data points** from credit ca
 - 💻 **Clean JSON output** (pretty printed with `rich`)
 - ⚙️ **Modular structure** — easy to add new banks
 
-pdf_pro/
-│
-├── parser.py
-├── extractors/
-│ ├── init.py
-│ ├── chase_extractor.py
-│ ├── amex_extractor.py
-│ ├── citi_extractor.py
-│ ├── hdfc_extractor.py
-│ └── sbi_extractor.py
-│
-├── utils/
-│ ├── init.py
-│ └── pdf_utils.py
-│
-├── samples/
-│ └── chase_sample.pdf
-│
-├── requirements.txt
-└── README.md
+<img width="289" height="395" alt="image" src="https://github.com/user-attachments/assets/f93b2c9c-9cb3-4b43-afbc-45c48cddf238" />
+
+
+---
+
+## ⚙️ **Setup Instructions**
+
+### 1️⃣ **Clone or Download the Repository**
+```bash
+git clone https://github.com/<your-username>/credit-card-pdf-parser.git
+cd credit-card-pdf-parser
+Create a Virtual Environment
+python -m venv venv
+
+3️⃣ Activate the Environment
+🪟 Windows
+venv\Scripts\activate
+
+🐧 macOS/Linux
+source venv/bin/activate
+
+4️⃣ Install Dependencies
+pip install -r requirements.txt
+
+
+▶️ How to Run
+Basic Usage:
+python parser.py samples/chase_sample.pdf
+
+Example Output:
+{
+  "issuer": "chase",
+  "used_ocr": false,
+  "cardholder_name": "John Doe",
+  "card_last4": "3117",
+  "card_variant": "REWARDS",
+  "billing_cycle": "12/03/18 - 01/01/19",
+  "payment_due_date": "01/25/2019",
+  "new_balance": "1,245.00"
+}
+
+🧩 How It Works
+
+Detects issuer – Identifies the bank name by scanning text for keywords (e.g., “Chase,” “HDFC,” “Amex”).
+
+Extracts text – Reads PDFs using pdfplumber; if text is unreadable, switches to OCR via pytesseract.
+
+Applies regex patterns – Extracts specific fields like dates, balances, and card numbers.
+
+Outputs structured JSON – Displays extracted info neatly using the rich library.
+
 
