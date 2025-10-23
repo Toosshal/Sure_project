@@ -26,7 +26,9 @@ To build a unified PDF parser that extracts **5 key data points** from credit ca
 - ⚙️ **Modular structure** — easy to add new banks
 
 <img width="289" height="395" alt="image" src="https://github.com/user-attachments/assets/f93b2c9c-9cb3-4b43-afbc-45c48cddf238" />
+## ""Output**
 
+<img width="699" height="237" alt="image" src="https://github.com/user-attachments/assets/97928ac4-6cac-43e5-8903-065bfeb33b9f" />
 
 ---
 
@@ -76,5 +78,5 @@ Applies regex patterns – Extracts specific fields like dates, balances, and ca
 
 Outputs structured JSON – Displays extracted info neatly using the rich library.
 
-<img width="699" height="237" alt="image" src="https://github.com/user-attachments/assets/5f34ce71-fa77-4527-92ac-8f2edec92cdb" />
+
 
