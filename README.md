@@ -25,7 +25,24 @@ To build a unified PDF parser that extracts **5 key data points** from credit ca
 - 💻 **Clean JSON output** (pretty printed with `rich`)
 - ⚙️ **Modular structure** — easy to add new banks
 
----
-
-## 📁 **Project Structure**
+pdf_pro/
+│
+├── parser.py
+├── extractors/
+│ ├── init.py
+│ ├── chase_extractor.py
+│ ├── amex_extractor.py
+│ ├── citi_extractor.py
+│ ├── hdfc_extractor.py
+│ └── sbi_extractor.py
+│
+├── utils/
+│ ├── init.py
+│ └── pdf_utils.py
+│
+├── samples/
+│ └── chase_sample.pdf
+│
+├── requirements.txt
+└── README.md
 
